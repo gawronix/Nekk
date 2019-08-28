@@ -1,0 +1,124 @@
+section {
+  background: #E4E4DC; }
+
+.split {
+  display: grid; }
+
+.left {
+  grid-column: 1; }
+
+.right {
+  grid-column: 2; }
+
+.line {
+  position: relative;
+  border: 3px solid #383735;
+  width: 75%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%); }
+
+h1 {
+  font-family: "Times";
+  color: #383735; }
+
+h2, span {
+  font-family: "Open Sans";
+  font-weight: bold;
+  letter-spacing: 0;
+  color: #D7B0A1; }
+
+h3 {
+  font-family: "Open Sans";
+  color: #383735; }
+
+article {
+  line-height: 2;
+  font-size: 2em;
+  text-align: center;
+  border: none;
+  width: 55%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  background-color: #EFEFED; }
+  article .whiteBorder {
+    padding: 10px 10px 10px 10px;
+    background-color: #EFEFED;
+    position: relative; }
+    article .whiteBorder .rightArrowHorizontal {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      position: absolute;
+      right: 0;
+      margin-top: -20%; }
+    article .whiteBorder .border {
+      border: 2px solid #383735;
+      box-sizing: border-box;
+      padding: 50px 50px 50px 50px;
+      margin: 20px 20px 20px 20px;
+      background-color: #EFEFED; }
+  article .topRightImageContainer {
+    position: absolute;
+    right: 0; }
+    article .topRightImageContainer .bigImg {
+      position: relative;
+      margin-top: -130%;
+      z-index: 2;
+      margin-left: -10%;
+      margin-bottom: 20%; }
+    article .topRightImageContainer .crabImg {
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+    article .topRightImageContainer .textContainer {
+      position: relative; }
+      article .topRightImageContainer .textContainer .textOnImg {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding-left: 20px;
+        padding-right: 20px; }
+
+.bottomContainer {
+  position: relative;
+  width: 100%;
+  font-size: 2em; }
+  .bottomContainer .textBanner {
+    box-sizing: border-box;
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    background-color: #EFEFED;
+    z-index: 1; }
+    .bottomContainer .textBanner .textProps {
+      text-align: justify;
+      margin-left: 10%;
+      margin-left: 2%;
+      padding: 5%; }
+      .bottomContainer .textBanner .textProps .line {
+        left: 0%; }
+    .bottomContainer .textBanner .downArrowVertical {
+      position: absolute;
+      top: 0;
+      margin-left: 80%; }
+  .bottomContainer .mapImg {
+    position: relative;
+    margin-left: 5%;
+    margin-top: -4%; }
+    .bottomContainer .mapImg .wheel {
+      position: absolute;
+      top: 205px;
+      left: 23%;
+      z-index: 2;
+      transform: translate(-50%); }
+    .bottomContainer .mapImg .photoOnMap {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      z-index: 3;
+      transform: translate(-50%); }

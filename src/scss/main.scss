@@ -1,0 +1,10 @@
+// import common files
+@import './config.scss',
+'./header.scss',
+'./content.scss',
+'./footer.scss';
+
+body {
+    margin: auto;
+    background: $color_background 0% 0% no-repeat padding-box;
+}

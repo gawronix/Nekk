@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>REJS</title>
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="Keywords" content="">
+    <meta name="og:title" property="og:title" content="">
+    <meta name="robots" content="index, follow, noodp">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- jQueryUI -->
+</head>
+
+<body>
+    <!--Nagłówek-->
+    <header>
+        <div class="hero">
+            <!--Kontener odpowiedzialny za centrowanie na hero image-->
+            <div class="center-content">
+                <!-- Hero Image -->
+                <div class="img-container">
+                    <img src="./img/LOGO.svg">
+                </div>
+                <!-- Tekst główny hero - image  -->
+                <div class="textHead">
+                    <h1>Rejs czas zacząć</h1>
+                </div>
+            </div>
+            <!-- Nawigacja strzałką do main-->
+            <div class="arrow">
+                <a href="#main"><img src="./img/STRZALKA.svg"></a>
+            </div>
+        </div>
+    </header>
+    <!--SEKCJA Główna-->
+    <main id="main">
+        <section>
+            <article>
+                <!-- Artykuł po lewej-->
+                <div class="split left">
+                    <div class="whiteBorder">
+                        <div class="border">
+                            <h1>Wyłania się idea występów jakich jeszcze nie było... </h1>
+                            <div class="line"></div>
+                            <h2>27 czerwca od godz. 14.00</h2>
+                            <h3>wsiadam do tramwaju nr 8 i jedziemy na przystań nadwarciańska przy ul. Marii
+                                Panny, by ...
+                            </h3>
+                        </div>
+                        <div class="rightArrowHorizontal">
+                            <img src="./img/strzalka-1.svg">
+                        </div>
+                    </div>
+                </div>
+                <!-- Artykuł po prawej-->
+                <div class="split right">
+                    <div class="topRightImageContainer">
+                        <div class="bigImg">
+                            <img src="./img/ZDJECIE 1.png">
+                        </div>
+                        <!-- <div class="crabImg">
+                        <img src="./img/KRAB.svg">
+                    </div> -->
+                        <div class="textContainer">
+                            <div class="imgFale">
+                                <img src="./img/FALE.svg">
+                            </div>
+                            <div class="textOnImg">
+                                <h1>
+                                    w tak pięknych
+                                    okolicznościach przyrody…
+                                </h1>
+                                <div class="line"></div>
+                                <h2>
+                                    popłynąć statkiem „Bajka”
+                                </h2>
+                                <h3>
+                                    na plażę Szeląg
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Sekcja Mapy -->
+            <div class="bottomContainer">
+                <!--lewy tekst-->
+                <div class="textBanner">
+                    <div class="textProps">
+                        <h1>
+                            Na <span>(tendencyjne)</span>
+                            pytania odpowiada Stawek
+                        </h1>
+                        <div class="line"></div>
+                        <h3>
+                            rzekawartapoznania.pl
+                        </h3>
+                    </div>
+                    <div class="downArrowVertical">
+                        <img src="./img/strzalka-1.svg">
+                    </div>
+                </div>
+                <!--mapa-->
+                <div class="mapImg">
+                    <img src="./img/Layer 1.png">
+                    <div class="wheel">
+                        <img src="./img/ster.svg">
+                    </div>
+                    <div class="photoOnMap">
+                        <img src="./img/zdjecie.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> <!-- STOPKA -->
+    <footer class="footer">
+        <div class="footer__Text">
+            <div> Wszelkie podobieństwo do osób rzeczywiście istniejących jest przypadkowe</div>
+            <div class="footer__Text--bold">NEKK2019 </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    // Jquery od przesuwania strzałki
+    $(function () {
+        $('a[href*=#]').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+        });
+    });
+</script>
+
+</html>

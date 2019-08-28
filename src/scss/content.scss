@@ -1,0 +1,172 @@
+@import './config.scss';
+
+section {
+    background: $color_background;
+}
+
+.split {
+    display: grid;
+}
+
+.left {
+    grid-column: 1;
+}
+
+.right {
+    grid-column: 2;
+}
+
+.line {
+    position: relative;
+    border: 3px solid $color_text;
+    width: 75%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%);
+}
+
+h1 {
+    font-family: $font_head;
+    color: $color_text;
+}
+
+h2 {
+    font-family: $font_sections_text;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: $color_awards;
+}
+
+h3 {
+    font-family: $font_sections_text;
+    color: $color_text;
+}
+
+span {
+    @extend h2;
+}
+
+article {
+    line-height: 2;
+    font-size: 2em;
+    text-align: center;
+    border: none;
+    width: 55%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    background-color: $color_header_text;
+
+    .whiteBorder {
+        padding: 10px 10px 10px 10px;
+        background-color: $color_header_text;
+        position: relative;
+
+        .rightArrowHorizontal {
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            position: absolute;
+            right: 0;
+            margin-top: -20%;
+        }
+
+
+        .border {
+            border: 2px solid $color_text;
+            box-sizing: border-box;
+            padding: 50px 50px 50px 50px;
+            margin: 20px 20px 20px 20px;
+            background-color: $color_header_text;
+        }
+
+    }
+
+    .topRightImageContainer {
+        position: absolute;
+        right: 0;
+
+        .bigImg {
+            position: relative;
+            margin-top: -130%;
+            z-index: 2;
+            margin-left: -10%;
+            margin-bottom: 20%;
+        }
+
+        .crabImg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .textContainer {
+            position: relative;
+
+            .textOnImg {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.bottomContainer {
+    position: relative;
+    width: 100%;
+    font-size: 2em;
+
+    .textBanner {
+        box-sizing: border-box;
+        margin-top: 10%;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 10px;
+        background-color: #EFEFED;
+        z-index: 1;
+
+        .textProps {
+            text-align: justify;
+            margin-left: 10%;
+            margin-left: 2%;
+            padding: 5%;
+
+            .line {
+                left: 0%;
+            }
+        }
+
+        .downArrowVertical {
+            position: absolute;
+            top: 0;
+            margin-left: 80%;
+        }
+    }
+
+    .mapImg {
+        position: relative;
+        margin-left: 5%;
+        margin-top: -4%;
+
+        .wheel {
+            position: absolute;
+            top: 205px;
+            left: 23%;
+            z-index: 2;
+            transform: translate(-50%);
+        }
+
+        .photoOnMap {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            z-index: 3;
+            transform: translate(-50%);
+        }
+    }
+}

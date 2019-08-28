@@ -1,0 +1,67 @@
+@import './config.scss';
+
+.hero {
+    background-image: url(../../img/zrzu.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    filter: brightness(70%);
+    z-index: 1;
+}
+
+.center-content {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%);
+
+    h1 {
+        padding: 2rem 6rem;
+        color: #EFEFED;
+        font-size: 88px;
+        text-align: center;
+        border: 3px solid #EFEFED;
+    }
+
+    img {
+        width: 185px;
+        height: 218px;
+    }
+
+    .img-container {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    .textHead {
+        width: max-content;
+        margin-top: 396px;
+        transform: translateY(-50%);
+    }
+}
+
+.arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 1024px) {
+    .arrow {
+        bottom: 10px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .arrow {
+        bottom: 5px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .arrow {
+        bottom: 0;
+    }
+}
