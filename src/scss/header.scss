@@ -56,20 +56,23 @@
     transform: translateX(-50%);
 }
 
-@media only screen and (max-width: 1024px) {
-    .arrow {
-        bottom: 10px;
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+
+    .heroImage {
+        background-image: url(../../img/zrzu@2x.png);
     }
+
 }
 
-@media only screen and (max-width: 768px) {
-    .arrow {
-        bottom: 5px;
-    }
-}
+@media only screen and (max-width: 1620px) {}
 
-@media only screen and (max-width: 480px) {
-    .arrow {
-        bottom: 0;
-    }
-}
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {}
