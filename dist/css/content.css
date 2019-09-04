@@ -1,22 +1,15 @@
+main {
+  position: relative;
+  margin: auto 5%; }
+
 section {
   background: #E4E4DC; }
 
-.split {
-  display: grid; }
-
-.left {
-  grid-column: 1; }
-
-.right {
-  grid-column: 2; }
-
-.line {
-  position: relative;
-  border: 3px solid #383735;
-  width: 75%;
-  left: 50%;
-  z-index: 2;
-  transform: translate(-50%); }
+.line, article .whiteBorder .border .lineWhiteBorder, .bottomContainer .textBanner .textProps .lineBottomContainer {
+  border: 1px solid #383735;
+  position: absolute;
+  width: 100%;
+  transform: translate(0%); }
 
 h1 {
   font-family: "Times";
@@ -37,10 +30,9 @@ article {
   font-size: 2em;
   text-align: center;
   border: none;
-  width: 55%;
+  width: 50%;
   margin-top: 5%;
   margin-bottom: 5%;
-  margin-left: 5%;
   background-color: #EFEFED; }
   article .whiteBorder {
     padding: 10px 10px 10px 10px;
@@ -61,64 +53,110 @@ article {
       padding: 50px 50px 50px 50px;
       margin: 20px 20px 20px 20px;
       background-color: #EFEFED; }
+      article .whiteBorder .border .lineWhiteBorder {
+        width: 70%;
+        transform: translate(8%); }
   article .topRightImageContainer {
     position: absolute;
-    right: 0; }
+    width: 100%;
+    top: 0; }
     article .topRightImageContainer .bigImg {
-      position: relative;
-      margin-top: -130%;
-      z-index: 2;
-      margin-left: -10%;
-      margin-bottom: 20%; }
+      position: absolute;
+      transform: translateY(-50%);
+      right: 0; }
     article .topRightImageContainer .crabImg {
       position: absolute;
-      left: 0;
-      bottom: 0; }
+      left: -50px;
+      bottom: -25px; }
     article .topRightImageContainer .textContainer {
+      width: 100%;
+      height: 100vh;
       position: relative; }
-      article .topRightImageContainer .textContainer .textOnImg {
+      article .topRightImageContainer .textContainer .imgFale {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
-        padding-left: 20px;
-        padding-right: 20px; }
+        right: 0;
+        top: 0;
+        transform: translate(15%, 100%); }
+      article .topRightImageContainer .textContainer .textOnImg {
+        width: 540px;
+        position: absolute;
+        transform: translateY(60%);
+        top: 0;
+        right: 20px; }
 
 .bottomContainer {
   position: relative;
   width: 100%;
-  font-size: 2em; }
+  font-size: 2rem; }
   .bottomContainer .textBanner {
     box-sizing: border-box;
     margin-top: 10%;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 10px;
     background-color: #EFEFED;
     z-index: 1; }
     .bottomContainer .textBanner .textProps {
-      text-align: justify;
-      margin-left: 10%;
       margin-left: 2%;
-      padding: 5%; }
-      .bottomContainer .textBanner .textProps .line {
-        left: 0%; }
+      padding: 5%;
+      width: 500px; }
+      .bottomContainer .textBanner .textProps .lineBottomContainer {
+        width: 40%;
+        transform: translate(-35%); }
     .bottomContainer .textBanner .downArrowVertical {
       position: absolute;
       top: 0;
       margin-left: 80%; }
   .bottomContainer .mapImg {
     position: relative;
-    margin-left: 5%;
-    margin-top: -4%; }
+    margin-bottom: 10%; }
     .bottomContainer .mapImg .wheel {
       position: absolute;
       top: 205px;
-      left: 23%;
+      left: 32%;
       z-index: 2;
       transform: translate(-50%); }
     .bottomContainer .mapImg .photoOnMap {
       position: absolute;
-      top: 20px;
-      left: 50%;
-      z-index: 3;
-      transform: translate(-50%); }
+      transform: translate(-40%, -50%);
+      top: 0;
+      right: 0; }
+      .bottomContainer .mapImg .photoOnMap img {
+        width: 100%;
+        display: inline-block;
+        max-width: 705px;
+        max-height: 554px; }
+    .bottomContainer .mapImg .strips {
+      position: absolute;
+      transform: translate(15%);
+      top: 0;
+      right: 0; }
+    .bottomContainer .mapImg .orangeBorder {
+      background-color: #D7B0A1;
+      width: 850px;
+      padding: 10px 10px 10px 10px;
+      position: absolute;
+      transform: translate(0%, 55%);
+      bottom: 0;
+      z-index: 1;
+      right: 0; }
+      .bottomContainer .mapImg .orangeBorder .textPS {
+        top: 0;
+        position: absolute;
+        transform: translate(-40%, -72%);
+        right: 0; }
+      .bottomContainer .mapImg .orangeBorder .orangeWhiteBorder {
+        border: 2px solid #EFEFED;
+        box-sizing: border-box;
+        padding: 50px 50px 50px 50px;
+        margin: 20px 20px 20px 20px;
+        background-color: #D7B0A1; }
+        .bottomContainer .mapImg .orangeBorder .orangeWhiteBorder .textOnMap {
+          font-family: "Times";
+          color: #EFEFED;
+          font-size: 56px; }
+          .bottomContainer .mapImg .orangeBorder .orangeWhiteBorder .textOnMap ul {
+            margin: 0;
+            list-style-type: none; }
+          .bottomContainer .mapImg .orangeBorder .orangeWhiteBorder .textOnMap ul > li {
+            text-indent: -5px; }
+          .bottomContainer .mapImg .orangeBorder .orangeWhiteBorder .textOnMap ul > li:before {
+            content: "- ";
+            text-indent: -5px; }

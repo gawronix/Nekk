@@ -1,19 +1,19 @@
 @import './config.scss';
 
 .footer {
-    background: #EFEFED 0% 0% no-repeat padding-box;
+    position: relative;
+    background: $color_header_text 0% 0% no-repeat padding-box;
     opacity: 1;
     width: 100%;
-    top: 0px;
-    left: 0px;
     height: 178px;
+    bottom: 0;
 
     &__Text {
         text-align: left;
         padding: 80px 0 0 80px;
         letter-spacing: 0;
         opacity: 1;
-        font: 20px $font_footer;
+        font: 20px "Times";
 
         &--bold {
             color: $color_awards;

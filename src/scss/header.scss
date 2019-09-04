@@ -1,13 +1,18 @@
 @import './config.scss';
 
 .hero {
+    position: relative;
+    height: 100vh;
+}
+
+.heroImage {
     background-image: url(../../img/zrzu.png);
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: absolute;
     height: 100vh;
-    filter: brightness(70%);
-    z-index: 1;
+    width: 100%;
+    filter: brightness(0.8);
 }
 
 .center-content {
@@ -20,7 +25,8 @@
     h1 {
         padding: 2rem 6rem;
         color: #EFEFED;
-        font-size: 88px;
+        font-size: 86px;
+        font-weight: normal;
         text-align: center;
         border: 3px solid #EFEFED;
     }
@@ -55,11 +61,13 @@
         bottom: 10px;
     }
 }
+
 @media only screen and (max-width: 768px) {
     .arrow {
         bottom: 5px;
     }
 }
+
 @media only screen and (max-width: 480px) {
     .arrow {
         bottom: 0;

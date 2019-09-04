@@ -1,28 +1,19 @@
 @import './config.scss';
 
+main {
+    position: relative;
+    margin: auto 5%;
+}
+
 section {
     background: $color_background;
 }
 
-.split {
-    display: grid;
-}
-
-.left {
-    grid-column: 1;
-}
-
-.right {
-    grid-column: 2;
-}
-
 .line {
-    position: relative;
-    border: 3px solid $color_text;
-    width: 75%;
-    left: 50%;
-    z-index: 2;
-    transform: translate(-50%);
+    border: 1px solid $color_text;
+    position: absolute;
+    width: 100%;
+    transform: translate(0%);
 }
 
 h1 {
@@ -51,10 +42,9 @@ article {
     font-size: 2em;
     text-align: center;
     border: none;
-    width: 55%;
+    width: 50%;
     margin-top: 5%;
     margin-bottom: 5%;
-    margin-left: 5%;
     background-color: $color_header_text;
 
     .whiteBorder {
@@ -80,37 +70,51 @@ article {
             padding: 50px 50px 50px 50px;
             margin: 20px 20px 20px 20px;
             background-color: $color_header_text;
+
+            .lineWhiteBorder {
+                @extend .line;
+                width: 70%;
+                transform: translate(8%);
+            }
         }
 
     }
 
     .topRightImageContainer {
         position: absolute;
-        right: 0;
+        width: 100%;
+        top: 0;
 
         .bigImg {
-            position: relative;
-            margin-top: -130%;
-            z-index: 2;
-            margin-left: -10%;
-            margin-bottom: 20%;
+            position: absolute;
+            transform: translateY(-50%);
+            right: 0;
         }
 
         .crabImg {
             position: absolute;
-            left: 0;
-            bottom: 0;
+            left: -50px;
+            bottom: -25px;
         }
 
         .textContainer {
+            width: 100%;
+            height: 100vh;
             position: relative;
 
-            .textOnImg {
+            .imgFale {
                 position: absolute;
-                bottom: 20px;
+                right: 0;
+                top: 0;
+                transform: translate(15%, 100%);
+            }
+
+            .textOnImg {
+                width: 540px;
+                position: absolute;
+                transform: translateY(60%);
+                top: 0;
                 right: 20px;
-                padding-left: 20px;
-                padding-right: 20px;
             }
         }
     }
@@ -119,25 +123,23 @@ article {
 .bottomContainer {
     position: relative;
     width: 100%;
-    font-size: 2em;
+    font-size: 2rem;
 
     .textBanner {
         box-sizing: border-box;
         margin-top: 10%;
-        margin-right: 5%;
-        margin-left: 5%;
-        margin-bottom: 10px;
-        background-color: #EFEFED;
+        background-color: $color_header_text;
         z-index: 1;
 
         .textProps {
-            text-align: justify;
-            margin-left: 10%;
             margin-left: 2%;
             padding: 5%;
+            width: 500px;
 
-            .line {
-                left: 0%;
+            .lineBottomContainer {
+                @extend .line;
+                width: 40%;
+                transform: translate(-35%);
             }
         }
 
@@ -150,23 +152,82 @@ article {
 
     .mapImg {
         position: relative;
-        margin-left: 5%;
-        margin-top: -4%;
+        margin-bottom: 10%;
 
         .wheel {
             position: absolute;
             top: 205px;
-            left: 23%;
+            left: 32%;
             z-index: 2;
             transform: translate(-50%);
         }
 
         .photoOnMap {
             position: absolute;
-            top: 20px;
-            left: 50%;
-            z-index: 3;
-            transform: translate(-50%);
+            transform: translate(-40%, -50%);
+            top: 0;
+            right: 0;
+
+            img {
+                width: 100%;
+                display: inline-block;
+                max-width: 705px;
+                max-height: 554px;
+            }
+
+        }
+
+        .strips {
+            position: absolute;
+            transform: translate(15%);
+            top: 0;
+            right: 0;
+        }
+
+        .orangeBorder {
+            background-color: $color_awards;
+            width: 850px;
+            padding: 10px 10px 10px 10px;
+            position: absolute;
+            transform: translate(0%, 55%);
+            bottom: 0;
+            z-index: 1;
+            right: 0;
+
+            .textPS {
+                top: 0;
+                position: absolute;
+                transform: translate(-40%, -72%);
+                right: 0;
+            }
+
+            .orangeWhiteBorder {
+                border: 2px solid$color_header_text;
+                box-sizing: border-box;
+                padding: 50px 50px 50px 50px;
+                margin: 20px 20px 20px 20px;
+                background-color: $color_awards;
+
+                .textOnMap {
+                    font-family: $font_sections_head;
+                    color: $color_header_text;
+                    font-size: 56px;
+
+                    ul {
+                        margin: 0;
+                        list-style-type: none;
+                    }
+
+                    ul>li {
+                        text-indent: -5px;
+                    }
+
+                    ul>li:before {
+                        content: "- ";
+                        text-indent: -5px;
+                    }
+                }
+            }
         }
     }
 }

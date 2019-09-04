@@ -2,3 +2,4 @@ node_modules/
 package-lock.json
 Index_1.xd
 .vscode
+.DS_Store
