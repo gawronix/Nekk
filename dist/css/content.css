@@ -172,7 +172,7 @@ article {
           content: "- ";
           text-indent: -5px; }
 
-@media only screen and (max-width: 1620px) {
+@media only screen and (max-width: 1680px) {
   article {
     width: 43%; }
   .topRightImageContainer .bigImg img {
